@@ -1,9 +1,12 @@
-import React, {useState} from 'react'
+import React, { useState, useContext } from 'react'
 import Button from './Button'
+import { SettingContext } from '../context/SettingsContext'
 
 // https://www.youtube.com/watch?v=0PnSEPm2UKY 
 
 const Settings = () => {
+    const {updateExecute} = useContext(SettingContext)
+
     const [newTimer, setNewTimer] = useState({
         work: 0.3,
         short: 0.2,
@@ -31,13 +34,16 @@ const Settings = () => {
                     ...newTimer,
                     long: parseInt(value)
                 })
+                break;
             default:
                 break;
         }
-        console.log(newTimer)
     }
 
-    const handleSubmit = () => {}
+    const handleSubmit = e => {
+        e.preventDefault()
+        updateExecute(newTimer)
+    }
 
     return (
         <div className="form-container">

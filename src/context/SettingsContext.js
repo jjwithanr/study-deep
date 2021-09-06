@@ -7,6 +7,12 @@ function SettingsContextProvider(props) {
     const [pomodoro, setPomodoro] = useState(0)
     const [executing, setExecuting] = useState({})
     const [startAnimate, setStartAnimate] = useState(false)
+    const [newTimer, setNewTimer] = useState({        // default 25min work sessions, 5min short break, 10mins long break
+        work: 25,
+        short: 5,
+        long: 10,
+        active: 'work'
+    })
 
     function setCurrentTimer (active_state) {
         updateExecute({

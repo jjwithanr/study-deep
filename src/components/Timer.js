@@ -2,8 +2,9 @@ import React from 'react'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 
 const Timer = (props) => {
+
     return (
-        <div>
+        <div className="timer">
             <CountdownCircleTimer
                 isPlaying
                 duration={props.duration * 60}

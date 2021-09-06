@@ -1,13 +1,18 @@
 import React, { useEffect, useContext } from 'react'
 import Timer from './components/Timer'
-import Settings from './components/Settings'
+import Navbar from './components/Navbar'
 
 const App = () => {
+  const showSettings = false;
   return (
-    <div>
-      <h1>Deep-Study</h1>
-      <Timer duration={25} />
-    </div>
+    <>
+      <Navbar />
+      { showSettings === false ?
+      <>
+        <Timer duration={25} />
+      </>: <h1>TESTING</h1>}
+      
+    </>
   )
     
 }

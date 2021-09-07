@@ -1,12 +1,12 @@
 import React, { useEffect, useContext } from 'react'
 import Timer from './components/Timer'
-import Navbar from './components/Navbar'
+import TopRight from './components/TopRight'
 
 const App = () => {
   const showSettings = false;
   return (
     <>
-      <Navbar />
+      <TopRight />
       { showSettings === false ?
       <>
         <Timer duration={25} />

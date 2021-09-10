@@ -1,4 +1,5 @@
 import React from 'react'
+import './components.css'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 
 const Timer = (props) => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../index.css'
+import './components.css'
 import { FcSettings } from 'react-icons/fc'
 import { GoogleLogin } from 'react-google-login';
 
